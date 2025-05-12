@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  postgres:
+    container_name: tracker_postgres
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: cashbook_tracker
+      POSTGRES_PASSWORD: cashbook_tracker
+    ports:
+      - "5433:5432"
+
+
+#  docker run --name tracker_postgresql -e POSTGRES_USER=cashbook_tracker -e POSTGRES_PASSWORD=cashbook_tracker -p 5433:5432 -d postgres
